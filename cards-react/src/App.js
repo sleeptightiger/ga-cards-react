@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import CardList from './components/CardList';
 import AddCard from './components/AddCard';
-import './App.css';
+import Footer from './components/Footer';
+import './css/App.css';
 
 class App extends Component {
   render() {
@@ -18,9 +19,7 @@ class App extends Component {
 
         <CardList />
 
-        <footer>
-          <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
-        </footer>
+        <Footer />
       </div>
 
     );

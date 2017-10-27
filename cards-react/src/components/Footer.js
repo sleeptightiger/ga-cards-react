@@ -5,10 +5,11 @@ import '../css/Footer.css';
 class Footer extends Component {
   render() {
     return (
-      <form onSubmit={this.props.onSubmitQuery}>
-        <input type="text" onChange={this.props.handleSearchInput}/>
-        <button type="submit">Submit</button>
-      </form>
+      <div className="Footer">
+        <footer>
+          <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
+        </footer>
+      </div>
     );
   }
 }
