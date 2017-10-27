@@ -6,7 +6,7 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFlipped: false
+      isFlipped: this.props.isFlipped || false
     }
     this.flipCard = this.flipCard.bind(this);
   }
