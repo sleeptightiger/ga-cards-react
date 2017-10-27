@@ -3,7 +3,7 @@ import Card from './Card';
 import '../css/AddCard.css';
 import {
   database
-} from 'firebase';
+} from '../utils/firebase.js';
 
 class AddCard extends Component {
   constructor(props) {
@@ -26,6 +26,14 @@ class AddCard extends Component {
 
   onSubmitQuestion(e) {
     e.preventDefault();
+    database.ref('/questions')
+    .push({
+      question: this.state.question
+    })
+    .then(() => {
+      window.location.replace('/')
+    })
+    .catch(err => console.log(err));
 
   }
 
@@ -38,7 +46,7 @@ class AddCard extends Component {
               <input onChange={this.onChangeQuestion} type="text" ref={input => this.question = input} placeholder="What's your question?" />
             </form>
             <br />
-            <Card title={this.state.question} isFlipped={true}/>
+            <Card question={this.state.question} isFlipped={true}/>
           </div>
         </section>
       </div>

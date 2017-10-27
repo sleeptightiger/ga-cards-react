@@ -19,13 +19,13 @@ class Card extends Component {
 
   render() {
 
-    let title = this.state.isFlipped ? this.props.title + ' ________' : '';
+    let question = this.state.isFlipped ? this.props.question + ' ________' : '';
 
     return (
       <div className="Card" onClick={this.flipCard}>
         <div className="col-sm-6 col-md-4 col-lg-4">
           <div className="card">
-            <h4 className="card-title">{title}</h4>
+            <h4 className="card-title">{question}</h4>
             <h6>Cards Against Assembly</h6>
           </div>
         </div>
