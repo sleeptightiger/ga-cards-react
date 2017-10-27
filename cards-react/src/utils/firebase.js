@@ -12,7 +12,7 @@ const config = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
 };
 
-console.log('here is my firebase config', config);
+// console.log('here is my firebase config', config);
 
 // Firebase instance
 firebase.initializeApp(config);

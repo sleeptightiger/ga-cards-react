@@ -16,12 +16,15 @@ class CardList extends Component {
 
   componentWillMount() {
     //TODO get questions from db
-    database.ref('/memes').on('value', data => {
-    const results = firebaseListToArray(data.val());
-    this.setState({
-      memes: results
+    database.ref('/questions').on('value', data => {
+      const results = firebaseListToArray(data.val());
+      console.log(results);
+      const questions = results.map((result) => result.question)
+      this.setState({
+        questions: questions
+      });
     });
-  });
+
   }
 
   render() {
