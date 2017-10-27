@@ -3,6 +3,7 @@ import Header from './components/Header';
 import CardList from './components/CardList';
 import AddCard from './components/AddCard';
 import Footer from './components/Footer';
+import About from './components/About';
 import './css/App.css';
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
           <a href="about.html">About</a>
         </nav>
 
-        <CardList />
+        <About />
 
         <Footer />
       </div>
